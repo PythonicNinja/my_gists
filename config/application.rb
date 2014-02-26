@@ -25,5 +25,8 @@ module MyGists
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     config.i18n.enforce_available_locales = false
+
+    # Bootsstrap, http://ruby.railstutorial.org/chapters/filling-in-the-layout?version=4.0#sec-custom_css
+    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
   end
 end
