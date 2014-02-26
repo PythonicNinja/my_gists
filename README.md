@@ -20,6 +20,38 @@ rake db:migrate RAILS_ENV=test
 rspec
 ```
 
+## Chrome dla aplikacji – Bootstrap
+
+Dopisujemy do *Gemfile* dwa gemy:
+
+```ruby
+gem 'sass-rails', '4.0.1'
+gem 'bootstrap-sass', '3.1.1.0'
+```
+
+Dodajemy plik *app/assets/styleshets/custom.css.scss* o zawartości:
+
+```scss
+$font-size-base: 18px;
+$line-height-base: 1.6;
+
+@import "bootstrap";
+
+body {
+  padding-top: 60px;
+}
+```
+
+**Uwaga:** Musimy usunąć wygenerowany plik *scaffold.css*
+który będzie nadpisywał wszystkie bootstrapowe ustawienia.
+
+Wszystkie zmienne są opisane na stronie Bootstrapa
+w sekcji [Less variables](http://getbootstrap.com/customize/#less-variables)
+
+Przerabiamy layot aplikacji dodając panel nawigacyjny
+ze strony [Getting started](http://getbootstrap.com/getting-started/)
+z przykładu [Starter template](http://getbootstrap.com/examples/starter-template/).
+
 
 ## Wdrażanie aplikacji na Heroku
 
